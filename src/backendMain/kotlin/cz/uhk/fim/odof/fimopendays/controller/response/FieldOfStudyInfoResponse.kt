@@ -22,7 +22,7 @@ data class FieldOfStudyInfoResponse(
     val admissionProcedure: String?,
     val estimatedNumberOfAdmissions: Int,
     val accreditationUntil: LocalDateTime? = null,
-    val urlDocumentsToDownload: List<DocumentInfo>?,
+    val urlDocumentsToDownload: List<DocumentInfo>? = null,
 )
 
 fun FieldOfStudyInfo.convertToResponse(): FieldOfStudyInfoResponse {
@@ -46,9 +46,5 @@ fun FieldOfStudyInfo.convertToResponse(): FieldOfStudyInfoResponse {
     )
 }
 
-data class FieldOfStudyInfoList(
-    val degreeType: DegreeType,
-    val items: List<FieldOfStudyInfoResponse>,
-)
 
 
