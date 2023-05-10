@@ -24,7 +24,6 @@ class App : Application() {
                 headerNav()
             }
             div {
-
                 add(EventList())
             }
             footer {
@@ -32,10 +31,8 @@ class App : Application() {
             }
         }
         AppScope.launch {
-            val pingResult = Model.ping("Hello world from client!")
+            val pingResult = Model.ping("Ping from client!")
             root.add(Span(pingResult))
-
-//            root.add(EventList())
         }
     }
 }
@@ -51,6 +48,6 @@ fun main() {
         CoreModule,
         FontAwesomeModule,
         TabulatorCssMaterializeModule,
-        TabulatorModule
+        TabulatorModule,
     )
 }
