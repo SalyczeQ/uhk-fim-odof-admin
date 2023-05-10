@@ -14,6 +14,9 @@ interface IUniversityEventService {
         filter: List<RemoteFilter>?,
         sorter: List<RemoteSorter>?,
         state: String?
-    ) :
-            RemoteData<UniversityEvent>
+    ): RemoteData<UniversityEvent>
+
+    suspend fun saveUniversityEvent(universityEvent: UniversityEvent): UniversityEvent
+
+    suspend fun deleteUniversityEvent(id: String): Boolean
 }
