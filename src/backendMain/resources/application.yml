@@ -4,11 +4,12 @@ server:
     mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
     min-response-size: 1024
 spring:
-  r2dbc:
-    url: r2dbc:postgresql://localhost:5432/odof
-    username: postgres
-    password: toor
   flyway:
     url: jdbc:postgresql://localhost:5432/odof
     user: postgres
+    password: toor
+    locations: classpath:db/migration
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/odof
+    username: postgres
     password: toor

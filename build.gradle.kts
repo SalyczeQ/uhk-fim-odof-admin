@@ -91,12 +91,17 @@ kotlin {
                 implementation("org.springframework.boot:spring-boot-devtools")
                 implementation("org.springframework.boot:spring-boot-starter-webflux")
                 implementation("org.springframework.boot:spring-boot-starter-security")
+
+                //data persistence
                 implementation("org.springframework.boot:spring-boot-starter-data-r2dbc")
                 runtimeOnly("org.postgresql:postgresql")
                 runtimeOnly("org.postgresql:r2dbc-postgresql")
+
+                //db scheme migration
+                implementation("org.flywaydb:flyway-core")
+
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactive:$coroutinesVersion")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:$coroutinesVersion")
-                implementation("org.flywaydb:flyway-core")
                 implementation("org.jetbrains.kotlin:kotlin-reflect")
             }
         }

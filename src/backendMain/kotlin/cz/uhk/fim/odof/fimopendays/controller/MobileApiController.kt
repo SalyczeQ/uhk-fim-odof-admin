@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping(path = ["api/v1/"]
-//    , consumes = ["application/json"], produces = ["application/json"]
-)
+@RequestMapping(path = ["api/v1/"], consumes = ["application/json"], produces = ["application/json"])
 class MobileApiController(
     private val universityEventRepository: UniversityEventRepository,
     private val fieldOfStudyInfoService: FieldOfStudyInfoService,
